@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_c/menu.dart';
 import 'Home.dart';
 import 'info.dart';
-
+import 'complaint_page.dart'; 
 class Home2 extends StatelessWidget {
   const Home2({Key? key}) : super(key: key);
 
@@ -98,6 +98,29 @@ class Home2 extends StatelessWidget {
                   textStyle: TextStyle(fontSize: 16, color: Colors.white),
                 ),
               ),
+              ElevatedButton(
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => ComplaintStatusPage()),
+                  );
+                },
+                //child: const Text('Info'),
+                child: const Text(
+                  'complait managemtn',
+                  style: TextStyle(
+                    fontWeight: FontWeight.bold, // Make text bold
+                    color: Colors.white, // Text color white
+                  ),
+                ),
+
+                style: ElevatedButton.styleFrom(
+               backgroundColor: Colors.teal.shade700, // Green button color
+                  padding: EdgeInsets.symmetric(horizontal: 40, vertical: 15),
+                  textStyle: TextStyle(fontSize: 16, color: Colors.white),
+                ),
+              ),
+              
             ],
           ),
         ),
